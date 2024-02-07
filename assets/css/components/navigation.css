@@ -1,0 +1,48 @@
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: tomato;
+    padding: 4rem;
+
+    & a {
+        color: white;
+
+        &:hover {
+            color: turquoise;
+        }
+
+        &:visited {
+            color: teal;
+        }
+    }
+
+    & .nav-btn {
+        display: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+
+        & a {
+            display: none;
+        }
+
+        & .nav-btn {
+            display: block;
+        }
+
+        &[data-opened="true"] {
+            & a {
+                display: block;
+            }
+        }
+    }
+}
+
+/* nav a {
+    
+} */
